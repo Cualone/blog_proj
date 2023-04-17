@@ -4,10 +4,16 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BlogmakeApplication {
+public class MyBlogApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BlogmakeApplication.class, args);
+		SpringApplication.run(MyBlogApplication.class, args);
 	}
 
 }
+
+/*
+글과 관련된 기능
+회원과 관련된 기능
+ */
+
