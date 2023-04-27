@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/default_layout}">
+<head>
+    <title>xx 번 포스트</title>
+</head>
+<body>
+
+  <div layout:fragment="content" class="w-full">
+
+      <div class="detail-contents container w-full mx-auto px-16 mt-16">
+
+          <div class="post-title-container flex flex-col">
+
+            <span class="post-title-content flex text-6xl font-bold">
+                [[ ${post.title} ]]
+            </span>
+
+<!--              <span class="post-title-meta flex mt-6" th:text="${#temporals.format(post.createdAt, 'yyyy-MM-dd HH:mm:ss')}"></span>-->
+              <span class="post-title-meta flex mt-6 text-sm">
+                  Created At : [[ ${#temporals.format(post.createdAt, 'yyyy-MM-dd HH:mm')} ]]
+              </span>
+              <span class="text-sm"> Writer : Anonymous</span>
+
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="post-contents-container flex">
+
+              <div class="post-body" th:utext="${post.body}">
+
+              </div>
+
+          </div>
+
+      </div>
+
+
+  </div>
+
+</body>
+</html>

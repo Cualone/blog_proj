@@ -36,11 +36,13 @@ public class Post {
     // 언제 수정되었는지
     private LocalDateTime updatedAt = LocalDateTime.now();
 
-    public void update(String tittle, String body) {
+    public void update(String title, String body) {
         this.title = title;
         this.body = body;
+
         this.updatedAt = LocalDateTime.now();
     }
+
 
     public static Post createPost(String title, String body) {
 
@@ -55,5 +57,6 @@ public class Post {
         return post;
 
     }
+
 
 }

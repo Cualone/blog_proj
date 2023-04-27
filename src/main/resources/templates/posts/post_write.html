@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/edit_layout}">
+    <head>
+        <title>포스트 작성</title>
+    </head>
+    <body>
+    <div layout:fragment="content" class="w-full">
+        <div class="write-contents flex flex-col">
+
+            <div class="post-write-header flex p-8">
+                        <span class="text-5xl">
+                            Post Write
+                        </span>
+            </div>
+
+            <div class="post-write contents flex flex-col">
+                <input name="title" type="text" placeholder="Title here" class="input input-bordered input-info w-full" />
+                <div class="mt-8 h-full" id="editor"></div>
+            </div>
+
+            <div class="post-write-btn flex flex-row justify-end mt-4">
+
+                <button class="btn btn-success">Confirm</button>
+                <button class="btn btn-error mx-4">Cancel</button>
+
+            </div>
+
+        </div>
+        <script src="/js/edit_default.js"></script>
+    </div>
+
+    </body>
+</html>

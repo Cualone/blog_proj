@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">-->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+  <nav th:fragment="navBarFragment">
+      <div class="item-container bg-base-200 w-72 h-full fixed">
+
+          <ul class="menu lg:menu-normal w-full h-full p-4 rounded-box">
+              <li class="menu-title">
+                  <span class="text-lg text-primary-focus">Category</span>
+              </li>
+              <li th:each="m : ${#numbers.sequence(1,10)}">
+                  <a th:if="${m == 3}" class="active">Category [[${m}]]</a>
+                  <a th:unless="${m == 3}">Category [[${m}]]</a>
+              </li>
+          </ul>
+
+      </div>
+
+  </nav>
+
+</html>
